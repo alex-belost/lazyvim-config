@@ -1,0 +1,39 @@
+{
+  "name": "nvim-snippets",
+  "author": "alex.belost",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "php",
+        "path": "./lang/php.json"
+      },
+      {
+        "language": "css",
+        "path": "./lang/css.json"
+      },
+      {
+        "language": "scss",
+        "path": "./lang/scss.json"
+      },
+      {
+        "language": "css",
+        "path": "./common/core/stylesheets.json"
+      },
+      {
+        "language": "scss",
+        "path": "./common/core/stylesheets.json"
+      },
+      {
+        "language": "css",
+        "path": "./common/projects/stylesheets.json"
+      },
+      {
+        "language": "scss",
+        "path": "./common/projects/stylesheets.json"
+      }
+    ]
+  }
+}
