@@ -1,0 +1,54 @@
+{
+  "Php expression": {
+    "prefix": [
+      "php",
+      "_"
+    ],
+    "body": [
+      "<?php $0 ?>"
+    ]
+  },
+  "Dump": {
+    "prefix": "dump",
+    "body": [
+      "<pre style='background:lightcoral;margin:20px;'>",
+      "  <?php echo var_dump($0) ?>",
+      "</pre>"
+    ]
+  },
+  "If statement": {
+    "prefix": "if:block",
+    "body": [
+      "<?php if ($1) : ?>",
+      "  $0",
+      "<?php endif; ?>"
+    ]
+  },
+  "WP: if": {
+    "prefix": "wp:if",
+    "body": [
+      "<?php if (have_rows($1)) : ?>",
+      "  $0",
+      "<?php endif; ?>"
+    ]
+  },
+  "WP: while": {
+    "prefix": "wp:white",
+    "body": [
+      "<?php while (have_rows($1)) : the_row(); ?>",
+      "  $0",
+      "<?php endwhile; ?>"
+    ]
+  },
+  "WP: group": {
+    "prefix": "wp:group",
+    "body": [
+      "<?php if (have_rows('${1:variable}')) : ?>",
+      "  <?php while (have_rows('${1:variable}')) : the_row(); ?>",
+      "    $0",
+      "  <?php endwhile; ?>",
+      "<?php endif; ?>"
+    ],
+    "description": "Snippet for a WordPress 'have_rows' loop"
+  }
+}
