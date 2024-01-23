@@ -78,6 +78,7 @@ return {
         "wordpress",
         "blackfire",
         "Core",
+        "/Users/paymentop.alex.belost/Projects/helpers/wordpress/acf-stubs",
       },
     },
   },
