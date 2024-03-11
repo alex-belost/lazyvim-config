@@ -5,6 +5,8 @@
 -- local Util = require("lazyvim.util")
 
 vim.keymap.del("n", "<leader>l")
+vim.keymap.del("n", "<S-h>")
+vim.keymap.del("n", "<S-l>")
 
 vim.keymap.set(
   "n",
@@ -12,3 +14,6 @@ vim.keymap.set(
   "<cmd>Neotree focus filesystem left reveal<cr>",
   { silent = true, desc = "Open current file" }
 )
+
+vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })

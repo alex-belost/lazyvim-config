@@ -5,7 +5,7 @@ return {
     defaults = {
       mode = { "n", "v" },
 
-      ["<leader>s"] = "",
+      ["<leader>s"] = '',
       ["g"] = { name = "+goto" },
       ["gs"] = { name = "+surround" },
       ["]"] = { name = "+next" },
