@@ -3,3 +3,9 @@
 -- Add any additional options here
 
 vim.g.autoformat = false
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+vim.opt.wrap = true
+vim.opt.spell = true
