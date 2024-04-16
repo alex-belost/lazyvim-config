@@ -15,5 +15,12 @@ vim.keymap.set(
   { silent = true, desc = "Open current file" }
 )
 
+vim.keymap.set(
+  "n",
+  "<leader>gn",
+  "<cmd>Neogit<cr>",
+  { silent = true, desc = "Open the Neogit" }
+)
+
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
