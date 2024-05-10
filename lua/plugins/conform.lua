@@ -24,8 +24,8 @@ return {
         typescript = { "eslint" },
         typescriptreact = { "eslint" },
         javascriptreact = { "eslint" },
-        css = { "stylelint-lsp" },
-        scss = { "stylelint-lsp" },
+        css = { "stylelint_lsp" },
+        scss = { "stylelint_lsp" },
       },
       -- The options you set here will be merged with the builtin formatters.
       -- You can also define any custom formatters here.

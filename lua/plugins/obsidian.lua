@@ -60,7 +60,7 @@ return {
       nvim_cmp = true,
     },
 
-    dir = "/Users/paymentop.alex.belost/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal",
+    dir = "/Users/alex.belost/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal",
 
     daily_notes = {
       -- Optional, if you keep daily notes in a separate directory.
