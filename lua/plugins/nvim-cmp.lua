@@ -1,19 +1,27 @@
 return {
-  "hrsh7th/nvim-cmp",
-  opts = function()
+  "nvim-cmp",
+
+  dependencies = {
+    { "rafamadriz/friendly-snippets" },
+    { "garymjr/nvim-snippets", opts = { friendly_snippets = true } },
+  },
+  opts = function(_, opts)
     vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
 
     local cmp = require("cmp")
     local defaults = require("cmp.config.default")()
 
+    opts.snippet = {
+      expand = function(args)
+        vim.snippet.expand(args.body)
+      end,
+    }
+
+    table.insert(opts.sources, { name = "snippets" })
+
     return {
       completion = {
         completeopt = "menu,menuone,noinsert",
-      },
-      snippet = {
-        expand = function(args)
-          require("luasnip").lsp_expand(args.body)
-        end,
       },
       mapping = cmp.mapping.preset.insert({
         ["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -34,7 +42,7 @@ return {
       }),
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
-        { name = "luasnip" },
+        { name = "nvim-snippets" },
         { name = "path" },
       }, {
         { name = "buffer" },
@@ -57,3 +65,39 @@ return {
     }
   end,
 }
+
+-- return {
+--   "nvim-cmp",
+--   dependencies = {
+--     { "rafamadriz/friendly-snippets" },
+--     { "garymjr/nvim-snippets", opts = { friendly_snippets = true } },
+--   },
+--   opts = function(_, opts)
+--     opts.snippet = {
+--       expand = function(item)
+--         return lazyvim.cmp.expand(item.body)
+--       end,
+--     }
+--     table.insert(opts.sources, { name = "snippets" })
+--   end,
+--   keys = {
+--     {
+--       "<tab>",
+--       function()
+--         return vim.snippet.active({ direction = 1 }) and "<cmd>lua vim.snippet.jump(1)<cr>" or "<tab>"
+--       end,
+--       expr = true,
+--       silent = true,
+--       mode = { "i", "s" },
+--     },
+--     {
+--       "<s-tab>",
+--       function()
+--         return vim.snippet.active({ direction = -1 }) and "<cmd>lua vim.snippet.jump(-1)<cr>" or "<tab>"
+--       end,
+--       expr = true,
+--       silent = true,
+--       mode = { "i", "s" },
+--     },
+--   },
+-- }

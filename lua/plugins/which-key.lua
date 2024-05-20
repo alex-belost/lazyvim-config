@@ -5,11 +5,12 @@ return {
     defaults = {
       mode = { "n", "v" },
 
-      ["<leader>s"] = '',
+      ["<leader>s"] = nil,
       ["g"] = { name = "+goto" },
       ["gs"] = { name = "+surround" },
       ["]"] = { name = "+next" },
       ["["] = { name = "+prev" },
+      ["<leader>o"] = { name = "Obsidian" },
       ["<leader><tab>"] = { name = "+tabs" },
       ["<leader>b"] = { name = "+buffer" },
       ["<leader>c"] = { name = "+code" },
