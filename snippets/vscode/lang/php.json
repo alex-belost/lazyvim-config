@@ -1,8 +1,7 @@
 {
   "Php expression": {
     "prefix": [
-      "php",
-      "_"
+      "php"
     ],
     "body": [
       "<?php $0 ?>"

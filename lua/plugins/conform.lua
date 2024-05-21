@@ -1,7 +1,7 @@
 local util = require("conform.util")
 
 return {
-  "stevearc/conform.nvim",
+  "conform.nvim",
   opts = function()
     ---@class ConformOpts
     local opts = {
@@ -18,7 +18,6 @@ return {
         fish = { "fish_indent" },
         sh = { "shfmt" },
         php = { "php-cs-fixer" },
-        blade = { "blade-formatter", "rustywind" },
         python = { "black" },
         javascript = { "eslint" },
         typescript = { "eslint" },

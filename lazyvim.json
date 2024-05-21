@@ -1,6 +1,8 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.coding.luasnip",
     "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.editor.harpoon2",
     "lazyvim.plugins.extras.editor.illuminate",
     "lazyvim.plugins.extras.editor.mini-diff",
     "lazyvim.plugins.extras.editor.mini-files",
@@ -9,10 +11,10 @@
     "lazyvim.plugins.extras.lang.json",
     "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.vue",
     "lazyvim.plugins.extras.lang.yaml",
-    "lazyvim.plugins.extras.lazyrc",
     "lazyvim.plugins.extras.linting.eslint",
     "lazyvim.plugins.extras.ui.mini-indentscope",
     "lazyvim.plugins.extras.ui.treesitter-context",

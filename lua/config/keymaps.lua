@@ -16,7 +16,7 @@ vim.keymap.set("n", "<C-Down>", "<C-w>j", { desc = "Go to Lower Window" })
 vim.keymap.set("n", "<C-Up>", "<C-w>k", { desc = "Go to Upper Window" })
 vim.keymap.set("n", "<C-Right>", "<C-w>l", { desc = "Go to Right Window" })
 
--- Resize window using <ctrl> arrow keys
+-- Resize window using <Opts> arrow keys
 vim.keymap.set("n", "<M-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 vim.keymap.set("n", "<M-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
 vim.keymap.set("n", "<M-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
