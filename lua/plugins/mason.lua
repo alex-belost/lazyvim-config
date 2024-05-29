@@ -12,7 +12,6 @@ return {
       "dockerfile-language-server",
       "dot-language-server",
       "flake8",
-      "phpstan",
       "pyright",
       "shfmt",
       "stylua",

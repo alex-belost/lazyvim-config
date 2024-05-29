@@ -33,3 +33,7 @@ vim.keymap.set("n", "<leader>gn", "<cmd>Neogit<cr>", { silent = true, desc = "Op
 
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<Tab>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+
+vim.keymap.set("n", "<leader>cr", function()
+  return ":IncRename " .. vim.fn.expand("<cword>")
+end, { expr = true, desc = "IncRename" })
